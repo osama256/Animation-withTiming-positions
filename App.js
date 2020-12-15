@@ -4,14 +4,14 @@ import React from 'react';
 
 const App: () => React$Node = () => {
 
-  animation = useSharedValue(1)
+  const animation = useSharedValue(1)
 
   const startAnimation = () => {
     animation.value = withTiming(0,{
       duration:2000
     })
   }
-  animationStyle = useAnimatedStyle(() => {
+  const animationStyle = useAnimatedStyle(() => {
     return{
       opacity : animation.value
       // opacity:withTiming(animation.value,{
